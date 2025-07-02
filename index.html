@@ -30,6 +30,8 @@
       <ul>
         <li><a href="https://github.com/BJ1919810" target="_blank">GitHub</a></li>
         <li>QQ: 3054819975</li>
+        <li>Wechat: BJ1919810</li>
+        <li>Tel. 17753129646</li>
       </ul>
     </div>
 
@@ -44,12 +46,16 @@
             <label for="todo1">数据库大作业</label>
           </li>
           <li class="todo-item">
+            <input type="checkbox" id="todo1" checked>
+            <label for="todo2">并行程序大作业</label>
+          </li>
+          <li class="todo-item">
             <input type="checkbox" id="todo2">
-            <label for="todo2">熟悉AI工程领域，例如Prompt Engineering、RAG、向量检索等</label>
+            <label for="todo3">学习大数据技术栈，包括Hadoop/ Hive/ Spark/ Kafka/ OLAP引擎等</label>
           </li>
           <li class="todo-item">
             <input type="checkbox" id="todo3">
-            <label for="todo3">学习大数据技术栈，包括Hadoop/ Hive/ Spark/ Kafka/ OLAP引擎等</label>
+            <label for="todo4">熟悉AI工程领域，例如Prompt Engineering、RAG、向量检索等</label>
           </li>
         </ul>
       </div>
@@ -58,44 +64,61 @@
     <!-- 项目展示区域 -->
     <div id="projects" class="card">
       <div class="slide active">
-        <h3 class="project-title">智能图片识别平台（假的</h3>
-        <p class="project-description">基于TensorFlow.js的图像识别应用，支持实时相机识别功能，集成多种AI模型于一体，为用户提供便捷的图片分析服务。</p>
+        <h3 class="project-title">Scheduling Charging Bot</h3>
+        <p class="project-description">​​Scheduling Charging Bot​​ 是一个模拟工业园区内自主充电机器人调度策略的可视化项目。我们通过 ​​SDL2​​ 图形库动态展示多规模多策略场景下的机器人调度过程，旨在模拟优化相关情境下的充电资源利用率。</p>
         <div class="project-tech">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">TensorFlow.js</span>
-          <span class="tech-tag">Canvas API</span>
-          <span class="tech-tag">WebSockets</span>
+          <span class="tech-tag">​​C++</span>
+          <span class="tech-tag">SDL2</span>
+          <span class="tech-tag">JSON</span>
+          <span class="tech-tag">CSV</span>
         </div>
         <div class="project-link-wrapper">
-          <a href="#" class="project-link">查看项目</a>
+          <a href="https://github.com/WhythZ/SchedulingChargingBot/" class="project-link" target="_blank">查看项目</a>
         </div>
       </div>
       
       <div class="slide">
-        <h3 class="project-title">音乐可视化仪表板（假的</h3>
-        <p class="project-description">采用Web Audio API和Canvas技术开发的音乐可视化工具，可根据音频生成动态视觉特效，支持自定义视觉效果与多种滤镜。</p>
+        <h3 class="project-title">Galgame对话网页(Demo)</h3>
+        <p class="project-description">运用Python的Flask模块作为后台以管理网站与调用本地人物语音生成的API，从而实现的模拟Galgame的对话网页。人物语音由GPT-Sovits技术支持生成。网站目前为Demo。注:由于个人服务器性能过差，故语音生成模块虽已实现，但是部署不能orz。</p>
         <div class="project-tech">
-          <span class="tech-tag">Web Audio API</span>
-          <span class="tech-tag">Canvas 2D</span>
-          <span class="tech-tag">Three.js</span>
-          <span class="tech-tag">SVG</span>
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">JSON</span>
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">TTS</span>
+          <span class="tech-tag">GPT-Sovits</span>
         </div>
         <div class="project-link-wrapper">
-          <a href="#" class="project-link">查看项目</a>
+          <a href="http://bj233.cn" class="project-link" target="_blank">查看项目</a>
         </div>
       </div>
       
       <div class="slide">
-        <h3 class="project-title">3D虚拟商品展示系统（假的</h3>
-        <p class="project-description">基于WebGL的3D商品交互展示系统，支持模型缩放、旋转、多角度查看功能，提供逼真的光影渲染效果，适用于电子商务平台。</p>
+        <h3 class="project-title">Library Management System</h3>
+        <p class="project-description">基于Python Tkinter和PostgreSQL（用于连接docker上的openGauss系统容器）开发的图书管理系统，提供管理员和用户双角色操作界面。</p>
         <div class="project-tech">
-          <span class="tech-tag">Three.js</span>
-          <span class="tech-tag">Blender</span>
-          <span class="tech-tag">GLSL</span>
-          <span class="tech-tag">React</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">OpenGauss</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Tkinter</span>
         </div>
         <div class="project-link-wrapper">
-          <a href="#" class="project-link">查看项目</a>
+          <a href="https://github.com/BJ1919810/DatabaseHomework" class="project-link" target="_blank">查看项目</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <h3 class="project-title">Chat-ViTs</h3>
+        <p class="project-description">Chat-ViTs是一款基于LLM与TTS技术的角色扮演语音助手。用户可自定义人设，并通过自然语言交互和实时语音输出提供生动有趣的对话体验。本项目整合了OpenAI的模型API调用接口和本地语音克隆（GPT-SoVITS），支持个性化角色设定、Markdown文本清洗、JSON日志存储以及历史对话记录查看，实现了一个兼具智能对话与情感表达的AI伴侣。​此外，你还可以让ta阅读一篇故事或是一段文本，为你带来别致的听觉享受。</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">JSON</span>
+          <span class="tech-tag">TTS</span>
+          <span class="tech-tag">OpenAI API</span>
+          <span class="tech-tag">GPT-Sovits</span>
+        </div>
+        <div class="project-link-wrapper">
+          <a href="https://github.com/BJ1919810/Chat-ViTs" class="project-link" target="_blank">查看项目</a>
         </div>
       </div>
       
@@ -104,6 +127,7 @@
         <div class="nav-dot active" data-index="0"></div>
         <div class="nav-dot" data-index="1"></div>
         <div class="nav-dot" data-index="2"></div>
+        <div class="nav-dot" data-index="3"></div>
       </div>
     </div>
   </div>
