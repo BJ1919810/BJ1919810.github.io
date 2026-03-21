@@ -3,123 +3,506 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BJ's Personal Homepage</title>
-  
-  <link rel="stylesheet" href="./static/APlayer-1.10.1/dist/APlayer.min.css">
-  <link rel="stylesheet" href="./static/style.css">
-  <script src="./static/APlayer-1.10.1/dist/APlayer.min.js"></script>
-  <script src="./static/Meting.min.js"></script>
+  <title>赵炳杰 | 个人网站</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 开场动画 -->
-  <div id="intro">
-    <h1>BJ</h1>
+  <canvas id="particles"></canvas>
+  
+  <div class="cursor-glow"></div>
+  
+  <nav class="nav">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>BJ<span class="logo-bracket">/&gt;</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </nav>
+
+  <main class="main">
+    <section id="home" class="section hero">
+      <div class="hero-content">
+        <div class="hero-greeting">
+          <span class="greeting-line"></span>
+          <span class="greeting-text">你好，我是</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line"></span>
+          <span class="title-name" data-text="赵炳杰">赵炳杰</span>
+        </h1>
+        <p class="hero-subtitle">
+          <span class="subtitle-line"></span>
+          <span class="typing-text" data-typed='["模型微调", "全栈开发", "AI工程", "问题解决者", "多模态处理"]'></span>
+        </p>
+        <div class="hero-cta">
+          <span class="cta-line"></span>
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="card-avatar">
+              <div class="avatar-ring"></div>
+              <img src="static/images/avatar.jpg" alt="Bingjie" />
+            </div>
+            <div class="card-stats">
+              <div class="stat">
+                <span class="stat-value" data-count="10">0</span>
+                <span class="stat-label">项目</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value" data-count="3">0</span>
+                <span class="stat-label">年</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value" data-count="50">0</span>
+                <span class="stat-label">贡献</span>
+              </div>
+            </div>
+            <div class="card-badges">
+              <span class="badge">⚡ 快速学习者</span>
+              <span class="badge">🎯 问题解决者</span>
+              <span class="badge">🚀 创新者</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Scroll to explore</span>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-header">
+         <span class="section-number">01.</span>
+        <h2 class="section-title">关于我</h2>
+        <span class="section-line"></span>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <div class="about-paragraph">
+            <span class="paragraph-icon">💡</span>
+            <p>我是华南理工大学<span strong>数据科学与大数据技术专业</strong>的学生，热衷于构建优雅的解决方案。我的技术之旅由好奇心和对有影响力的事物的创作渴望所驱动。</p>
+          </div>
+          <div class="about-paragraph">
+            <span class="paragraph-icon">🎓</span>
+            <p>目前专注于<span strong><strong>AI工程</strong>、<strong>大数据技术</strong>和<strong>分布式系统</strong>。致力于编写清晰、可维护的代码。</p>
+          </div>
+          <div class="about-paragraph">
+            <span class="paragraph-icon">🌟</span>
+            <p>我不敲代码的时候，你会看到我在探索新技术，阅读公众号技术文章，或者在喝咖啡时思考创新的想法。</p>
+          </div>
+          <div class="about-skills">
+            <h3>技术栈</h3>
+            <div class="skills-grid">
+              <div class="skill-category">
+                <span class="category-name">编程语言</span>
+                <div class="skill-tags">
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">C/C++</span>
+                  <span class="skill-tag">C#</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">SQL</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <span class="category-name">框架</span>
+                <div class="skill-tags">
+                  <span class="skill-tag">PyTorch</span>
+                  <span class="skill-tag">Flask</span>
+                  <span class="skill-tag">SDL2</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <span class="category-name">工具</span>
+                <div class="skill-tags">
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">Docker</span>
+                  <span class="skill-tag">Linux</span>
+                  <span class="skill-tag">OpenGauss</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <span class="category-name">AI与模型</span>
+                <div class="skill-tags">
+                  <span class="skill-tag">HuggingFace</span>
+                  <span class="skill-tag">Swift</span>
+                  <span class="skill-tag">GPT-SoVITS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-timeline">
+          <h3>历程</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2023.09 - 2027.07</span>
+                <h4>数据科学与大数据技术</h4>
+                <p>华南理工大学 计算机科学与技术专业</p>
+                <span class="timeline-status">本科在读</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2025.10 - 2025.12</span>
+                <h4>钛动科技实习</h4>
+                <p>AI模型测试与微调、电商广告视频分析</p>
+                <span class="timeline-status highlight">当前</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2025</span>
+                <h4>AI与大模型</h4>
+                <p>LLM微调、RAG系统、向量检索</p>
+                <span class="timeline-status">进行中</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="section-header">
+        <span class="section-number">02.</span>
+        <h2 class="section-title">项目展示</h2>
+        <span class="section-line"></span>
+      </div>
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="system">System</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-category="ai">
+          <div class="card-inner">
+            <div class="card-visual">
+              <div class="card-bg-gradient"></div>
+              <div class="card-icon">🎬</div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="card-tag">AI</span>
+                <span class="card-tag">Video</span>
+                <span class="card-tag">TTS</span>
+              </div>
+              <h3>Movie-trans</h3>
+              <p>视频翻译系统，支持基于文件的影片翻译和实时语音翻译，包含说话人分离、自动语音识别、大模型翻译和TTS合成。实现低延迟语音识别与实时文本翻译。</p>
+              <div class="card-tech">
+                <span>UVR5</span>
+                <span>Pyannote</span>
+                <span>FasterWhisper</span>
+                <span>DeepSeek API</span>
+                <span>Index-TTS2</span>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/BJ1919810/Movie-trans" target="_blank" class="card-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="ai">
+          <div class="card-inner">
+            <div class="card-visual">
+              <div class="card-bg-gradient"></div>
+              <div class="card-icon">🤖</div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="card-tag">AI</span>
+                <span class="card-tag">LLM</span>
+                <span class="card-tag">TTS</span>
+              </div>
+              <h3>Chat-ViTs</h3>
+              <p>基于LLM与TTS技术的角色扮演语音助手。用户可自定义人设，通过自然语言交互和实时语音输出提供生动有趣的对话体验。支持Markdown文本清洗、JSON日志存储及历史对话记录查看。</p>
+              <div class="card-tech">
+                <span>Python</span>
+                <span>OpenAI API</span>
+                <span>GPT-SoVITS</span>
+                <span>LLM</span>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/BJ1919810/Chat-ViTs" target="_blank" class="card-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="system">
+          <div class="card-inner">
+            <div class="card-visual">
+              <div class="card-bg-gradient"></div>
+              <div class="card-icon">🤖</div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="card-tag">C++</span>
+                <span class="card-tag">Simulation</span>
+              </div>
+              <h3>Scheduling Charging Bot</h3>
+              <p>制定调度策略安排自主充电机器人，以最大限度地提高它们的利用率。设计距离贪心、最大电量利用率贪心、车辆紧迫度贪心三种策略。使用SDL2可视化多种规模和策略的调度过程。</p>
+              <div class="card-tech">
+                <span>C++</span>
+                <span>SDL2</span>
+                <span>贪心策略</span>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/WhythZ/SchedulingChargingBot/" target="_blank" class="card-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web">
+          <div class="card-inner">
+            <div class="card-visual">
+              <div class="card-bg-gradient"></div>
+              <div class="card-icon">📚</div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="card-tag">Python</span>
+                <span class="card-tag">Database</span>
+              </div>
+              <h3>Library Management System</h3>
+              <p>基于Python Tkinter和PostgreSQL（连接Docker上的OpenGauss系统容器）开发的图书管理系统，提供管理员和用户双角色操作界面。</p>
+              <div class="card-tech">
+                <span>Python</span>
+                <span>Tkinter</span>
+                <span>OpenGauss</span>
+                <span>Docker</span>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/BJ1919810/DatabaseHomework" target="_blank" class="card-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web">
+          <div class="card-inner">
+            <div class="card-visual">
+              <div class="card-bg-gradient"></div>
+              <div class="card-icon">🎮</div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="card-tag">Flask</span>
+                <span class="card-tag">TTS</span>
+              </div>
+              <h3>Galgame Dialogue Web</h3>
+              <p>可与纳西妲进行对话的Galgame网页，目前接入DeepseekV3模型，由内置AI系统控制动作、口型与表情。以Live2D为前端表现方式，结合LLM与TTS模型后端，实现与虚拟人设模拟对话情景的效果。</p>
+              <div class="card-tech">
+                <span>Live2D</span>
+                <span>DeepSeek</span>
+                <span>RAG</span>
+                <span>LLM</span>
+                <span>TTS</span>
+              </div>
+              <div class="card-links">
+                <a href="http://bj233.cn" target="_blank" class="card-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-header">
+        <span class="section-number">03.</span>
+        <h2 class="section-title">联系我</h2>
+        <span class="section-line"></span>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p class="contact-intro">我非常乐意讨论新项目、创意想法，或成为你愿景的一部分。欢迎随时联系！</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-text">
+                <span class="contact-label">邮箱</span>
+                <a href="mailto:3054819975@qq.com">3054819975@qq.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div class="contact-text">
+                <span class="contact-label">电话</span>
+                <a href="tel:17753129646">+86 177-5312-9646</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-text">
+                <span class="contact-label">位置</span>
+                <span>广州，中国</span>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/BJ1919810" target="_blank" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="weixin://dl/chat/BJ1919810" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.667c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 6.847c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 01.598.082l1.584.926a.272.272 0 00.14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 01-.023-.156.49.49 0 01.201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.269-.029-.406-.044v-.412zm-2.53 3.025c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.969-.982z"/></svg>
+            </a>
+            <a href="https://space.bilibili.com/399764550" target="_blank" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M488.6 104.1C505.3 122.2 513 143.8 511.9 169.8V372.2C511.5 398.6 502.7 420.3 485.4 437.3C468.2 454.3 446.3 463.2 419.9 464H92.02C65.57 463.2 43.81 454.2 26.74 436.8C9.682 419.4 .7667 396.5 0 368.2V169.8C.7667 143.8 9.682 122.2 26.74 104.1C43.81 87.75 65.57 78.77 92.02 78H121.4L96.05 52.19C90.3 46.46 87.42 39.19 87.42 30.4C87.42 21.6 90.3 14.34 96.05 8.603C101.8 2.868 109.1 0 117.9 0C126.7 0 134 2.868 139.8 8.603L213.1 78H301.1L375.6 8.603C381.7 2.868 389.2 0 398 0C406.8 0 414.1 2.868 419.9 8.603C425.6 14.34 428.5 21.6 428.5 30.4C428.5 39.19 425.6 46.46 419.9 52.19L394.6 78L423.9 78C450.3 78.77 471.9 87.75 488.6 104.1H488.6zM449.8 173.8C449.4 164.2 446.1 156.4 439.1 150.3C433.9 144.2 425.1 140.9 416.4 140.5H96.05C86.46 140.9 78.6 144.2 72.47 150.3C66.33 156.4 63.07 164.2 62.69 173.8V368.2C62.69 377.4 65.95 385.2 72.47 391.7C78.99 398.2 86.85 401.5 96.05 401.5H416.4C425.6 401.5 433.4 398.2 439.7 391.7C446 385.2 449.4 377.4 449.8 368.2L449.8 173.8zM185.5 216.5C191.8 222.8 195.2 230.6 195.6 239.7V273C195.2 282.2 191.9 289.9 185.8 296.2C179.6 302.5 171.8 305.7 162.2 305.7C152.6 305.7 144.7 302.5 138.6 296.2C132.5 289.9 129.2 282.2 128.8 273V239.7C129.2 230.6 132.6 222.8 138.9 216.5C145.2 210.2 152.1 206.9 162.2 206.5C171.4 206.9 179.2 210.2 185.5 216.5H185.5zM377 216.5C383.3 222.8 386.7 230.6 387.1 239.7V273C386.7 282.2 383.4 289.9 377.3 296.2C371.2 302.5 363.3 305.7 353.7 305.7C344.1 305.7 336.3 302.5 330.1 296.2C323.1 289.9 320.7 282.2 320.4 273V239.7C320.7 230.6 324.1 222.8 330.4 216.5C336.7 210.2 344.5 206.9 353.7 206.5C362.9 206.9 370.7 210.2 377 216.5H377z"/></svg>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required placeholder=" ">
+            <label for="name">你的名字</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required placeholder=" ">
+            <label for="email">你的邮箱</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+            <label for="message">你的留言</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">
+            <span>发送消息</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="music-player-container">
+    <button class="player-toggle-btn" id="playerToggleBtn">
+      <svg class="music-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+      </svg>
+      <span class="toggle-text">音乐</span>
+    </button>
+    <div class="player-expanded" id="playerExpanded">
+      <div class="player-mini-header">
+        <span class="player-header-title">音乐播放器</span>
+        <div class="player-header-controls">
+          <button class="player-min-btn" id="playerMinBtn" title="最小化">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+              <path d="M19 13H5v-2h14v2z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="player-body">
+        <div class="player-cover" id="playerCover">
+          <div class="cover-placeholder" id="coverPlaceholder">🎵</div>
+          <img class="cover-image" id="coverImage" src="" alt="" style="display:none">
+        </div>
+        <div class="player-info-section">
+          <div class="player-track-info">
+            <span class="player-track-name" id="playerTrackName">等待加载...</span>
+            <span class="player-track-artist" id="playerTrackArtist">-</span>
+          </div>
+          <div class="player-controls-row">
+            <button class="player-ctrl-btn" id="playerOrderBtn" title="播放顺序">
+              <svg class="order-list-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+              <svg class="order-random-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
+            </button>
+            <button class="player-ctrl-btn" id="playerPrevBtn" title="上一首">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+            </button>
+            <button class="player-ctrl-btn player-play-btn" id="playerPlayBtn" title="播放/暂停">
+              <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+            </button>
+            <button class="player-ctrl-btn" id="playerNextBtn" title="下一首">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+            </button>
+          </div>
+          <div class="player-progress-section">
+            <div class="player-progress-bar" id="playerProgressBar">
+              <div class="player-progress-fill" id="playerProgressFill"></div>
+            </div>
+            <div class="player-time-display">
+              <span id="playerCurrentTime">0:00</span>
+              <span id="playerTotalTime">0:00</span>
+            </div>
+          </div>
+          <div class="player-volume-section">
+            <button class="player-volume-btn" id="playerVolumeBtn" title="音量">
+              <svg class="volume-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              <svg class="volume-mute-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+            </button>
+            <div class="player-volume-bar" id="playerVolumeBar">
+              <div class="player-volume-fill" id="playerVolumeFill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="player-playlist-toggle" id="playerPlaylistToggle">
+        <span>播放列表</span>
+        <svg class="toggle-arrow" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+          <path d="M7 10l5 5 5-5z"/>
+        </svg>
+      </div>
+      <div class="player-playlist-section" id="playerPlaylistSection">
+        <div class="playlist-loading" id="playlistLoading">加载中...</div>
+        <ul class="playlist-ul" id="playlistUl"></ul>
+      </div>
+    </div>
+    <audio id="audioPlayer" preload="none"></audio>
   </div>
 
-  <!-- 主内容区域 -->
-  <div id="main">
-    <div id="profile" class="card">
-      <img src="./static/images/avatar.jpg" alt="Avatar" style="width:100px; height:100px; border-radius:50%; margin-bottom:20px;" />
-      <h2>Bingjie Zhao</h2>
-      <p>世界纷杂 唯心不易</p>
-      <p>World shifts, heart remains.</p>
-    </div>
+  <footer class="footer">
+    <p>本页面由 <span class="footer-name">赵炳杰</span> 设计与构建</p>
+    <p class="footer-credit">灵感来自现代极简主义</p>
+  </footer>
 
-    <div id="contacts" class="card">
-      <h3>Contacts</h3>
-      <ul>
-        <li><a href="https://github.com/BJ1919810" target="_blank">GitHub</a></li>
-        <li>QQ: 3054819975</li>
-      </ul>
-    </div>
-
-    <div id="floating-aplayer"></div>
-
-    <div id="todo" class="card">
-      <h3>TODO List</h3>
-      <div id="todo-container">
-        <ul>
-          <li class="todo-item">
-            <input type="checkbox" id="todo1" checked>
-            <label for="todo1">数据库大作业</label>
-          </li>
-          <li class="todo-item">
-            <input type="checkbox" id="todo2">
-            <label for="todo2">熟悉AI工程领域，例如Prompt Engineering、RAG、向量检索等</label>
-          </li>
-          <li class="todo-item">
-            <input type="checkbox" id="todo3">
-            <label for="todo3">学习大数据技术栈，包括Hadoop/ Hive/ Spark/ Kafka/ OLAP引擎等</label>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 项目展示区域 -->
-    <div id="projects" class="card">
-      <div class="slide active">
-        <h3 class="project-title">智能图片识别平台（假的</h3>
-        <p class="project-description">基于TensorFlow.js的图像识别应用，支持实时相机识别功能，集成多种AI模型于一体，为用户提供便捷的图片分析服务。</p>
-        <div class="project-tech">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">TensorFlow.js</span>
-          <span class="tech-tag">Canvas API</span>
-          <span class="tech-tag">WebSockets</span>
-        </div>
-        <div class="project-link-wrapper">
-          <a href="#" class="project-link">查看项目</a>
-        </div>
-      </div>
-      
-      <div class="slide">
-        <h3 class="project-title">音乐可视化仪表板（假的</h3>
-        <p class="project-description">采用Web Audio API和Canvas技术开发的音乐可视化工具，可根据音频生成动态视觉特效，支持自定义视觉效果与多种滤镜。</p>
-        <div class="project-tech">
-          <span class="tech-tag">Web Audio API</span>
-          <span class="tech-tag">Canvas 2D</span>
-          <span class="tech-tag">Three.js</span>
-          <span class="tech-tag">SVG</span>
-        </div>
-        <div class="project-link-wrapper">
-          <a href="#" class="project-link">查看项目</a>
-        </div>
-      </div>
-      
-      <div class="slide">
-        <h3 class="project-title">3D虚拟商品展示系统（假的</h3>
-        <p class="project-description">基于WebGL的3D商品交互展示系统，支持模型缩放、旋转、多角度查看功能，提供逼真的光影渲染效果，适用于电子商务平台。</p>
-        <div class="project-tech">
-          <span class="tech-tag">Three.js</span>
-          <span class="tech-tag">Blender</span>
-          <span class="tech-tag">GLSL</span>
-          <span class="tech-tag">React</span>
-        </div>
-        <div class="project-link-wrapper">
-          <a href="#" class="project-link">查看项目</a>
-        </div>
-      </div>
-      
-      <!-- 导航点 -->
-      <div class="slide-nav">
-        <div class="nav-dot active" data-index="0"></div>
-        <div class="nav-dot" data-index="1"></div>
-        <div class="nav-dot" data-index="2"></div>
-      </div>
-    </div>
-  </div>
-
-  <script src="./static/script.js"></script>
-  <meting-js
-    server="tencent"
-    type="playlist"
-    id="9519430046"
-    fixed="true"
-    mini="true"
-    autoplay="false"
-    loop="all"
-    order="random"
-    preload="none"
-    volume="0.3">
-  </meting-js>
+  <script src="script.js"></script>
 </body>
 </html>
