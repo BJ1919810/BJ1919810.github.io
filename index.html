@@ -4,6 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>赵炳杰 | 个人网站</title>
+  <meta name="description" content="赵炳杰，华南理工大学数据科学与大数据技术专业在读。从零实现 0.5B 稀疏小模型训练、自研 C++ 3D 引擎、端到端视频配音翻译与云 GPU 出图工具链。" />
+  <meta name="author" content="赵炳杰" />
+  <link rel="canonical" href="https://bj1919810.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:site_name" content="赵炳杰 | 个人网站" />
+  <meta property="og:title" content="赵炳杰 | 个人网站" />
+  <meta property="og:description" content="把大模型的链路拆开重装（训练 / 语音 / 多模态），也从零写引擎和工具。" />
+  <meta property="og:url" content="https://bj1919810.github.io/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0f0f1a" id="themeColorMeta" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f0f1a'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M11 10l-5 6 5 6M21 10l5 6-5 6' stroke='url(%23g)' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,17 +28,33 @@
   
   <nav class="nav">
     <div class="nav-logo">
-      <span class="logo-bracket">&lt;</span>BJ<span class="logo-bracket">/&gt;</span>
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <defs>
+          <linearGradient id="brandGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="var(--primary)" />
+            <stop offset="1" stop-color="var(--secondary)" />
+          </linearGradient>
+        </defs>
+        <rect class="brand-plate" width="32" height="32" rx="7" />
+        <path class="brand-glyph" d="M11 10l-5 6 5 6M21 10l5 6-5 6" />
+      </svg>
+      <span class="brand-text">BJ</span>
     </div>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#home" class="nav-link active">Home</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#projects" class="nav-link">Projects</a>
+      <a href="#writing" class="nav-link">Writing</a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
-    <button class="theme-toggle" id="themeToggle">
-      <span class="theme-icon">🌙</span>
-    </button>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="切换深色 / 浅色主题">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="打开导航菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <main class="main">
@@ -42,7 +70,7 @@
         </h1>
         <p class="hero-subtitle">
           <span class="subtitle-line"></span>
-          <span class="typing-text" data-typed='["模型微调", "全栈开发", "AI工程", "问题解决者", "多模态处理"]'></span>
+          <span class="typing-text" data-typed='["LLM 训练与推理", "语音多模态", "C++ 引擎", "全栈开发", "工具自造者"]'></span>
         </p>
         <div class="hero-cta">
           <span class="cta-line"></span>
@@ -65,7 +93,7 @@
             </div>
             <div class="card-stats">
               <div class="stat">
-                <span class="stat-value" data-count="10">0</span>
+                <span class="stat-value" data-count="7">0</span>
                 <span class="stat-label">项目</span>
               </div>
               <div class="stat">
@@ -73,14 +101,14 @@
                 <span class="stat-label">年</span>
               </div>
               <div class="stat">
-                <span class="stat-value" data-count="50">0</span>
-                <span class="stat-label">贡献</span>
+                <span class="stat-value" data-count="15">0</span>
+                <span class="stat-label">开源仓库</span>
               </div>
             </div>
             <div class="card-badges">
-              <span class="badge">⚡ 快速学习者</span>
-              <span class="badge">🎯 问题解决者</span>
-              <span class="badge">🚀 创新者</span>
+              <span class="badge">🧪 测试先行</span>
+              <span class="badge">🔧 全链路自建</span>
+              <span class="badge">🛡️ 自测兜底</span>
             </div>
           </div>
         </div>
@@ -103,15 +131,15 @@
         <div class="about-text">
           <div class="about-paragraph">
             <span class="paragraph-icon">💡</span>
-            <p>我是华南理工大学<span strong>数据科学与大数据技术专业</strong>的学生，热衷于构建优雅的解决方案。我的技术之旅由好奇心和对有影响力的事物的创作渴望所驱动。</p>
+            <p>我是华南理工大学<strong>数据科学与大数据技术</strong>专业 2023 级本科生，方向是 AI 工程：从数据清洗、模型微调到语音与多模态，习惯把一条链路从头搭到尾。</p>
           </div>
           <div class="about-paragraph">
             <span class="paragraph-icon">🎓</span>
-            <p>目前专注于<span strong><strong>AI工程</strong>、<strong>大数据技术</strong>和<strong>分布式系统</strong>。致力于编写清晰、可维护的代码。</p>
+            <p>2025 年秋在钛动科技做算法实习，用 Qwen2.5-VL、Gemini、Llama 评测电商广告视频的<strong>多模态理解</strong>能力，也用 ms-swift 微调 Qwen2.5-VL-2B 提升广告识别准确率。现在在做<strong>从零训练的小模型</strong>和<strong>自研 3D 引擎</strong>。</p>
           </div>
           <div class="about-paragraph">
-            <span class="paragraph-icon">🌟</span>
-            <p>我不敲代码的时候，你会看到我在探索新技术，阅读公众号技术文章，或者在喝咖啡时思考创新的想法。</p>
+            <span class="paragraph-icon">🔍</span>
+            <p>比起调用现成的接口，我更愿意把一整条链路自己走完——训练、微调、推理，每一环都亲手体验，努力搞懂设计意图及背后的原理。</p>
           </div>
           <div class="about-skills">
             <h3>技术栈</h3>
@@ -120,36 +148,64 @@
                 <span class="category-name">编程语言</span>
                 <div class="skill-tags">
                   <span class="skill-tag">Python</span>
-                  <span class="skill-tag">C/C++</span>
+                  <span class="skill-tag">C++</span>
                   <span class="skill-tag">C#</span>
                   <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">Kotlin</span>
                   <span class="skill-tag">SQL</span>
                 </div>
               </div>
               <div class="skill-category">
-                <span class="category-name">框架</span>
+                <span class="category-name">模型与训练</span>
                 <div class="skill-tags">
                   <span class="skill-tag">PyTorch</span>
-                  <span class="skill-tag">Flask</span>
-                  <span class="skill-tag">SDL2</span>
+                  <span class="skill-tag">Transformers / HF</span>
+                  <span class="skill-tag">ms-swift / LoRA</span>
+                  <span class="skill-tag">ONNX Runtime</span>
+                  <span class="skill-tag">ComfyUI</span>
                 </div>
               </div>
               <div class="skill-category">
-                <span class="category-name">工具</span>
+                <span class="category-name">语音与多模态</span>
                 <div class="skill-tags">
-                  <span class="skill-tag">Git</span>
-                  <span class="skill-tag">Docker</span>
-                  <span class="skill-tag">Linux</span>
-                  <span class="skill-tag">OpenGauss</span>
-                </div>
-              </div>
-              <div class="skill-category">
-                <span class="category-name">AI与模型</span>
-                <div class="skill-tags">
-                  <span class="skill-tag">HuggingFace</span>
-                  <span class="skill-tag">Swift</span>
+                  <span class="skill-tag">Faster-Whisper</span>
+                  <span class="skill-tag">FunASR</span>
+                  <span class="skill-tag">pyannote</span>
+                  <span class="skill-tag">UVR5</span>
                   <span class="skill-tag">GPT-SoVITS</span>
+                  <span class="skill-tag">IndexTTS</span>
                 </div>
+              </div>
+              <div class="skill-category">
+                <span class="category-name">工程与部署</span>
+                <div class="skill-tags">
+                  <span class="skill-tag">Linux</span>
+                  <span class="skill-tag">Docker</span>
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">Flask</span>
+                  <span class="skill-tag">CMake / MSVC</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <span class="category-name">图形与前端</span>
+                <div class="skill-tags">
+                  <span class="skill-tag">bgfx / OpenGL</span>
+                  <span class="skill-tag">SDL2</span>
+                  <span class="skill-tag">three.js</span>
+                  <span class="skill-tag">Live2D</span>
+                  <span class="skill-tag">Capacitor</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-awards">
+              <h3>荣誉</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">2025 美国大学生数学建模竞赛 H 奖</span>
+                <span class="skill-tag">全国青少年人工智能创新挑战赛 专项赛金奖</span>
+                <span class="skill-tag">2023 Baidu 大脑杯 三等奖</span>
+                <span class="skill-tag">MTA 国际认证 Python</span>
+                <a class="skill-tag" href="https://github.com/ztl0001/dsh-notify/pull/2" target="_blank" rel="noopener">dsh-notify 上游 PR #2 已合并</a>
               </div>
             </div>
           </div>
@@ -161,27 +217,45 @@
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <span class="timeline-date">2023.09 - 2027.07</span>
-                <h4>数据科学与大数据技术</h4>
-                <p>华南理工大学 计算机科学与技术专业</p>
+                <h4>华南理工大学</h4>
+                <p>数据科学与大数据技术</p>
                 <span class="timeline-status">本科在读</span>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <span class="timeline-date">2025.10 - 2025.12</span>
-                <h4>钛动科技实习</h4>
-                <p>AI模型测试与微调、电商广告视频分析</p>
-                <span class="timeline-status highlight">当前</span>
+                <span class="timeline-date">2024.07 - 2026.05</span>
+                <h4>纳西妲对话伴侣</h4>
+                <p>Live2D + LLM + TTS，从角色扮演做到 Agent 系统</p>
+                <span class="timeline-status">个人项目</span>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <span class="timeline-date">2025</span>
-                <h4>AI与大模型</h4>
-                <p>LLM微调、RAG系统、向量检索</p>
-                <span class="timeline-status">进行中</span>
+                <span class="timeline-date">2025.09 - 2025.12</span>
+                <h4>Movie-trans 视频翻译</h4>
+                <p>端到端配音翻译流水线，项目负责人</p>
+                <span class="timeline-status">开源</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2025.10 - 2025.12</span>
+                <h4>钛动科技 算法实习生</h4>
+                <p>多模态模型评测、Qwen2.5-VL-2B 微调、广告视频数据</p>
+                <span class="timeline-status">实习</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2026 - 至今</span>
+                <h4>从零训练与引擎</h4>
+                <p>v4mini-0.5B、Protocol_Remake、云卡生图</p>
+                <span class="timeline-status highlight">进行中</span>
               </div>
             </div>
           </div>
@@ -215,16 +289,19 @@
                 <span class="card-tag">TTS</span>
               </div>
               <h3>Movie-trans</h3>
-              <p>视频翻译系统，支持基于文件的影片翻译和实时语音翻译，包含说话人分离、自动语音识别、大模型翻译和TTS合成。实现低延迟语音识别与实时文本翻译。</p>
+              <p>端到端视频配音翻译：人声分离 → 说话人分离 → 语音识别 → 大模型翻译 → 音色克隆配音 → 回封视频，支持中英日等多语种；另附基于 WASAPI 的实时语音翻译演示。</p>
+              <div class="card-criterion">
+                <span>5 语种 · 音色固定不漂 · 附实时语音翻译 demo</span>
+              </div>
               <div class="card-tech">
                 <span>UVR5</span>
                 <span>Pyannote</span>
-                <span>FasterWhisper</span>
+                <span>Faster-Whisper</span>
+                <span>IndexTTS-2.5</span>
                 <span>DeepSeek API</span>
-                <span>Index-TTS2</span>
               </div>
               <div class="card-links">
-                <a href="https://github.com/BJ1919810/Movie-trans" target="_blank" class="card-link">
+                <a href="https://github.com/BJ1919810/Movie-trans" target="_blank" rel="noopener noreferrer" class="card-link">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                   Code
                 </a>
@@ -233,28 +310,32 @@
           </div>
         </div>
 
-        <div class="project-card" data-category="ai">
+        <div class="project-card" data-category="web">
           <div class="card-inner">
             <div class="card-visual">
               <div class="card-bg-gradient"></div>
-              <div class="card-icon">🤖</div>
+              <div class="card-icon">🌸</div>
             </div>
             <div class="card-info">
               <div class="card-tags">
-                <span class="card-tag">AI</span>
-                <span class="card-tag">LLM</span>
-                <span class="card-tag">TTS</span>
+                <span class="card-tag">Agent</span>
+                <span class="card-tag">Live2D</span>
+                <span class="card-tag">RAG</span>
               </div>
-              <h3>Chat-ViTs</h3>
-              <p>基于LLM与TTS技术的角色扮演语音助手。用户可自定义人设，通过自然语言交互和实时语音输出提供生动有趣的对话体验。支持Markdown文本清洗、JSON日志存储及历史对话记录查看。</p>
+              <h3>纳西妲 · Live2D 对话伴侣</h3>
+              <p>Flask + DeepSeek + GPT-SoVITS 的桌面对话伴侣：口型与表情随语音驱动。普通模式维持人设，Agent 模式支持 function call——文件读写、目标规划、RAG 检索、记忆读写与命令执行，并带 workspace 隔离与命令白名单。</p>
+              <div class="card-criterion">
+                <span>14 个 function-call 工具 · 本地 ONNX 检索 · 会话状态放服务端</span>
+              </div>
               <div class="card-tech">
-                <span>Python</span>
-                <span>OpenAI API</span>
+                <span>Flask</span>
+                <span>Live2D</span>
                 <span>GPT-SoVITS</span>
-                <span>LLM</span>
+                <span>RAG</span>
+                <span>DeepSeek</span>
               </div>
               <div class="card-links">
-                <a href="https://github.com/BJ1919810/Chat-ViTs" target="_blank" class="card-link">
+                <a href="https://github.com/BJ1919810/Web_gal" target="_blank" rel="noopener noreferrer" class="card-link">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                   Code
                 </a>
@@ -267,22 +348,147 @@
           <div class="card-inner">
             <div class="card-visual">
               <div class="card-bg-gradient"></div>
-              <div class="card-icon">🤖</div>
+              <div class="card-icon">🧩</div>
             </div>
             <div class="card-info">
               <div class="card-tags">
                 <span class="card-tag">C++</span>
-                <span class="card-tag">Simulation</span>
+                <span class="card-tag">Engine</span>
+                <span class="card-tag">3D</span>
+              </div>
+              <h3>Protocol_Remake</h3>
+              <p>C++ 自研 3D 引擎与都市开放世界动作原型：自建 RHI 抽象层（bgfx / OpenGL 双后端）、单元格流式加载、跑酷与战斗两类场景；17 个无头测试套件 / 227 用例 / 9470 断言，画面用像素级 golden 帧判据。</p>
+              <div class="card-criterion">
+                <span>17 套件 / 227 用例 / 9470 断言 · 像素级 golden 帧</span>
+              </div>
+              <div class="card-tech">
+                <span>C++20</span>
+                <span>bgfx / OpenGL</span>
+                <span>CMake</span>
+                <span>无头测试</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="ai">
+          <div class="card-inner">
+            <div class="card-visual">
+              <div class="card-bg-gradient"></div>
+              <div class="card-icon">🧠</div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="card-tag">LLM</span>
+                <span class="card-tag">MoE</span>
+                <span class="card-tag">Training</span>
+              </div>
+              <h3>v4mini-0.5B</h3>
+              <p>从零实现的 0.5B 稀疏（MoE）小模型：模型结构、CSA 注意力、MoE 路由、优化器与训练循环全部自写，目标是把 DeepSeek 的稀疏结构在 8 GB 显存的 3070 上跑通训练，实测全参前反向 917 tok/s。</p>
+              <div class="card-criterion">
+                <span>0.5B 全参前反向 917 tok/s · 目标 8 GB 显存跑通训练</span>
+              </div>
+              <div class="card-tech">
+                <span>PyTorch</span>
+                <span>MoE</span>
+                <span>从零训练</span>
+                <span>RTX 3070</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="ai">
+          <div class="card-inner">
+            <div class="card-visual">
+              <div class="card-bg-gradient"></div>
+              <div class="card-icon">🖼️</div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="card-tag">AI</span>
+                <span class="card-tag">ComfyUI</span>
+                <span class="card-tag">Android</span>
+              </div>
+              <h3>云卡生图</h3>
+              <p>把云 GPU（AutoDL 3080）上的 ComfyUI 变成随手可用的出图工具链：SSH 隧道 CLI 支持文生图、图生图、多图合成、蒙版重绘与自由画幅，配套 LoRA 训练与安卓出图 App；MIT 许可，双平台 CI。</p>
+              <div class="card-criterion">
+                <span>MIT 许可 · Linux + Windows 双平台 CI · 安卓 APK 可交付</span>
+              </div>
+              <div class="card-tech">
+                <span>Python</span>
+                <span>ComfyUI</span>
+                <span>LoRA</span>
+                <span>Kotlin</span>
+                <span>GitHub Actions</span>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/BJ1919810/yunka-shengtu" target="_blank" rel="noopener noreferrer" class="card-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web">
+          <div class="card-inner">
+            <div class="card-visual">
+              <div class="card-bg-gradient"></div>
+              <div class="card-icon">✒️</div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="card-tag">AI</span>
+                <span class="card-tag">Writing</span>
+                <span class="card-tag">Web</span>
+              </div>
+              <h3>墨笔 Moibi</h3>
+              <p>AI 辅助长篇小说创作工具：角色卡、大纲、伏笔与状态账本都是可版本化的数据，由「上下文编译器」决定每次请求给模型看什么；水墨古风界面，Web 与 Android 同一套代码。</p>
+              <div class="card-criterion">
+                <span>上下文由程序决定而非凭感觉 · Web 与 Android 同源</span>
+              </div>
+              <div class="card-tech">
+                <span>JavaScript</span>
+                <span>Capacitor</span>
+                <span>Android</span>
+                <span>上下文工程</span>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/BJ1919810/Moibi" target="_blank" rel="noopener noreferrer" class="card-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="system">
+          <div class="card-inner">
+            <div class="card-visual">
+              <div class="card-bg-gradient"></div>
+              <div class="card-icon">⚙️</div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="card-tag">C++</span>
+                <span class="card-tag">Algorithm</span>
+                <span class="card-tag">可视化</span>
               </div>
               <h3>Scheduling Charging Bot</h3>
-              <p>制定调度策略安排自主充电机器人，以最大限度地提高它们的利用率。设计距离贪心、最大电量利用率贪心、车辆紧迫度贪心三种策略。使用SDL2可视化多种规模和策略的调度过程。</p>
+              <p>为自主充电机器人优化调度：距离贪心、电量利用率贪心、紧迫度贪心三种策略可切换，用 SDL2 把不同规模下的调度过程实时可视化对照。</p>
+              <div class="card-criterion">
+                <span>3 种调度策略同台对照 · 不同规模实时可视化</span>
+              </div>
               <div class="card-tech">
                 <span>C++</span>
                 <span>SDL2</span>
                 <span>贪心策略</span>
               </div>
               <div class="card-links">
-                <a href="https://github.com/WhythZ/SchedulingChargingBot/" target="_blank" class="card-link">
+                <a href="https://github.com/WhythZ/SchedulingChargingBot/" target="_blank" rel="noopener noreferrer" class="card-link">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                   Code
                 </a>
@@ -291,82 +497,110 @@
           </div>
         </div>
 
-        <div class="project-card" data-category="web">
-          <div class="card-inner">
-            <div class="card-visual">
-              <div class="card-bg-gradient"></div>
-              <div class="card-icon">📚</div>
-            </div>
-            <div class="card-info">
-              <div class="card-tags">
-                <span class="card-tag">Python</span>
-                <span class="card-tag">Database</span>
-              </div>
-              <h3>Library Management System</h3>
-              <p>基于Python Tkinter和PostgreSQL（连接Docker上的OpenGauss系统容器）开发的图书管理系统，提供管理员和用户双角色操作界面。</p>
-              <div class="card-tech">
-                <span>Python</span>
-                <span>Tkinter</span>
-                <span>OpenGauss</span>
-                <span>Docker</span>
-              </div>
-              <div class="card-links">
-                <a href="https://github.com/BJ1919810/DatabaseHomework" target="_blank" class="card-link">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                  Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
 
-        <div class="project-card" data-category="web">
-          <div class="card-inner">
-            <div class="card-visual">
-              <div class="card-bg-gradient"></div>
-              <div class="card-icon">🎮</div>
-            </div>
-            <div class="card-info">
-              <div class="card-tags">
-                <span class="card-tag">Flask</span>
-                <span class="card-tag">TTS</span>
-              </div>
-              <h3>Galgame Dialogue Web</h3>
-              <p>可与纳西妲进行对话的Galgame网页，目前接入DeepseekV3模型，由内置AI系统控制动作、口型与表情。以Live2D为前端表现方式，结合LLM与TTS模型后端，实现与虚拟人设模拟对话情景的效果。</p>
-              <div class="card-tech">
-                <span>Live2D</span>
-                <span>DeepSeek</span>
-                <span>RAG</span>
-                <span>LLM</span>
-                <span>TTS</span>
-              </div>
-              <div class="card-links">
-                <a href="http://bj233.cn" target="_blank" class="card-link">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
+      <div class="extra-works">
+        <h3 class="extra-title">其他在做 / 已开源的小件</h3>
+        <ul class="extra-list">
+          <li>
+            <a href="https://github.com/BJ1919810/ReadingWBW" target="_blank" rel="noopener">读书姬 ReadingWBW</a>
+            <span>用二次元语音包朗读中文 TXT 的 Windows 桌面程序，纯离线；念到哪个字，哪个字就亮起来，可打包成单文件 exe</span>
+          </li>
+          <li>
+            <a href="https://github.com/BJ1919810/dsh-rea" target="_blank" rel="noopener">dsh-rea</a>
+            <span>DeepSeek Harness 插件：一个开关挂上 207 个逆向工具</span>
+          </li>
+          <li>
+            <a href="https://github.com/BJ1919810/dsh-notify" target="_blank" rel="noopener">dsh-notify</a>
+            <span>任务结束推 Windows 通知，点通知直接跳回对应会话</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="writing" class="section writing">
+      <div class="section-header">
+        <span class="section-number">03.</span>
+        <h2 class="section-title">写作</h2>
+        <span class="section-line"></span>
+      </div>
+      <div class="writing-grid">
+      <article class="writing-card">
+        <div class="writing-visual">
+          <div class="card-bg-gradient"></div>
+          <div class="card-icon">📝</div>
         </div>
+        <div class="writing-body">
+          <div class="card-tags">
+            <span class="card-tag">科普长文</span>
+            <span class="card-tag">DeepSeek</span>
+            <span class="card-tag">MoE</span>
+          </div>
+          <h3>甲壳虫也能轻松看懂的 DeepSeek 架构</h3>
+          <p>写给第一次接触大模型内部结构的人。全程只用三个比喻讲清 MoE 与注意力为什么能省算力：每节先讲「像什么」，再给一段真身——公式、配置口径，以及机制到代码的对照表。</p>
+          <div class="card-criterion">
+            <span class="criterion-label">结构</span>
+            <span>10 节 · 从「一句话总纲」到「机制 → 公式 → 代码」对照表</span>
+          </div>
+          <div class="metaphors">
+            <div class="metaphor"><span class="metaphor-key">图书馆</span><span>注意力 = 每次开口前先翻自己读过的笔记</span></div>
+            <div class="metaphor"><span class="metaphor-key">专家门诊</span><span>MoE 路由 = 分诊台把问题只交给相关的几位专家</span></div>
+            <div class="metaphor"><span class="metaphor-key">草稿纸</span><span>摘要卡 = 读长文时边读边写卡片，而不是整本搬上桌</span></div>
+          </div>
+          <p class="writing-note">文中数字来自 DeepSeek V4 / V4.1 技术报告与官方 HF config，型号口径逐处点名；文中引用的 <code>文件:行</code> 指向我自己写的复刻实现，那部分代码目前没有公开。</p>
+          <a class="btn btn-secondary writing-cta" href="static/downloads/deepseek-architecture-for-beginners.md" download>下载全文（Markdown）</a>
+        </div>
+      </article>
+
+      <article class="writing-card writing-card--alt">
+        <div class="writing-visual">
+          <div class="card-bg-gradient"></div>
+          <div class="card-icon">📘</div>
+        </div>
+        <div class="writing-body">
+          <div class="card-tags">
+            <span class="card-tag">源码拆解</span>
+            <span class="card-tag">Agent / Harness</span>
+            <span class="card-tag">面试题库</span>
+          </div>
+          <h3>系统 · DSH 拆解与 Agent/Harness 面试宝典</h3>
+          <p>把 DeepSeek Harness（0.2.0-rc.2，279 个包、289 份中文文档）拆到<strong>源码级与运行级</strong>，产出一本面向 AI 工程师面试的学习集：Agent 循环、上下文工程、沙箱与审批、插件体系、子 Agent 长期记忆设计，逐章配系统设计题与综合面试题。</p>
+          <div class="card-criterion">
+            <span class="criterion-label">规模</span>
+            <span>27 章 · 约 20.9 万中文字 · 1.2 MB</span>
+          </div>
+          <div class="card-criterion">
+            <span class="criterion-label">底稿</span>
+            <span>DSH 官方包里的 289 份中文文档，逐章拆到源码与真实运行日志</span>
+          </div>
+          <div class="card-criterion">
+            <span class="criterion-label">核验</span>
+            <span>文档里标为「待核实」的 121 处逐条回源码结案，21 处与原文不符的已改正；全程只读安装包，没有改动它</span>
+          </div>
+          <a class="btn btn-secondary writing-cta" href="static/downloads/dsh-harness-interview-guide.md" download>下载全文（Markdown）</a>
+        </div>
+      </article>
       </div>
     </section>
 
     <section id="contact" class="section contact">
       <div class="section-header">
-        <span class="section-number">03.</span>
+        <span class="section-number">04.</span>
         <h2 class="section-title">联系我</h2>
         <span class="section-line"></span>
       </div>
       <div class="contact-content">
         <div class="contact-info">
-          <p class="contact-intro">我非常乐意讨论新项目、创意想法，或成为你愿景的一部分。欢迎随时联系！</p>
+          <p class="contact-intro">聊项目、聊想法，或者只是想看看我的代码怎么写的，都可以直接找我。</p>
           <div class="contact-details">
             <div class="contact-item">
               <div class="contact-icon">📧</div>
               <div class="contact-text">
                 <span class="contact-label">邮箱</span>
-                <a href="mailto:3054819975@qq.com">3054819975@qq.com</a>
+                <div class="contact-value">
+                  <a href="mailto:3054819975@qq.com">3054819975@qq.com</a>
+                  <button class="copy-btn" type="button" data-copy="3054819975@qq.com">复制</button>
+                </div>
               </div>
             </div>
             <div class="contact-item">
@@ -385,36 +619,41 @@
             </div>
           </div>
           <div class="social-links">
-            <a href="https://github.com/BJ1919810" target="_blank" class="social-link">
+            <a href="https://github.com/BJ1919810" target="_blank" rel="noopener noreferrer" class="social-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             </a>
             <a href="weixin://dl/chat/BJ1919810" class="social-link">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.667c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 6.847c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 01.598.082l1.584.926a.272.272 0 00.14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 01-.023-.156.49.49 0 01.201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.269-.029-.406-.044v-.412zm-2.53 3.025c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.969-.982z"/></svg>
             </a>
-            <a href="https://space.bilibili.com/399764550" target="_blank" class="social-link">
+            <a href="https://space.bilibili.com/399764550" target="_blank" rel="noopener noreferrer" class="social-link">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M488.6 104.1C505.3 122.2 513 143.8 511.9 169.8V372.2C511.5 398.6 502.7 420.3 485.4 437.3C468.2 454.3 446.3 463.2 419.9 464H92.02C65.57 463.2 43.81 454.2 26.74 436.8C9.682 419.4 .7667 396.5 0 368.2V169.8C.7667 143.8 9.682 122.2 26.74 104.1C43.81 87.75 65.57 78.77 92.02 78H121.4L96.05 52.19C90.3 46.46 87.42 39.19 87.42 30.4C87.42 21.6 90.3 14.34 96.05 8.603C101.8 2.868 109.1 0 117.9 0C126.7 0 134 2.868 139.8 8.603L213.1 78H301.1L375.6 8.603C381.7 2.868 389.2 0 398 0C406.8 0 414.1 2.868 419.9 8.603C425.6 14.34 428.5 21.6 428.5 30.4C428.5 39.19 425.6 46.46 419.9 52.19L394.6 78L423.9 78C450.3 78.77 471.9 87.75 488.6 104.1H488.6zM449.8 173.8C449.4 164.2 446.1 156.4 439.1 150.3C433.9 144.2 425.1 140.9 416.4 140.5H96.05C86.46 140.9 78.6 144.2 72.47 150.3C66.33 156.4 63.07 164.2 62.69 173.8V368.2C62.69 377.4 65.95 385.2 72.47 391.7C78.99 398.2 86.85 401.5 96.05 401.5H416.4C425.6 401.5 433.4 398.2 439.7 391.7C446 385.2 449.4 377.4 449.8 368.2L449.8 173.8zM185.5 216.5C191.8 222.8 195.2 230.6 195.6 239.7V273C195.2 282.2 191.9 289.9 185.8 296.2C179.6 302.5 171.8 305.7 162.2 305.7C152.6 305.7 144.7 302.5 138.6 296.2C132.5 289.9 129.2 282.2 128.8 273V239.7C129.2 230.6 132.6 222.8 138.9 216.5C145.2 210.2 152.1 206.9 162.2 206.5C171.4 206.9 179.2 210.2 185.5 216.5H185.5zM377 216.5C383.3 222.8 386.7 230.6 387.1 239.7V273C386.7 282.2 383.4 289.9 377.3 296.2C371.2 302.5 363.3 305.7 353.7 305.7C344.1 305.7 336.3 302.5 330.1 296.2C323.1 289.9 320.7 282.2 320.4 273V239.7C320.7 230.6 324.1 222.8 330.4 216.5C336.7 210.2 344.5 206.9 353.7 206.5C362.9 206.9 370.7 210.2 377 216.5H377z"/></svg>
             </a>
           </div>
         </div>
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" novalidate>
+          <p class="form-hint">这个表单不经过服务器。填完点「起草邮件」，会在你的邮件客户端里打开一封写好的信——你按下发送，我这边才收得到。</p>
           <div class="form-group">
             <input type="text" id="name" name="name" required placeholder=" ">
             <label for="name">你的名字</label>
+            <p class="form-error" data-error-for="name"></p>
           </div>
           <div class="form-group">
             <input type="email" id="email" name="email" required placeholder=" ">
             <label for="email">你的邮箱</label>
+            <p class="form-error" data-error-for="email"></p>
           </div>
           <div class="form-group">
             <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
             <label for="message">你的留言</label>
+            <p class="form-error" data-error-for="message"></p>
           </div>
           <button type="submit" class="btn btn-primary btn-submit">
-            <span>发送消息</span>
+            <span>起草邮件</span>
             <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
             </svg>
           </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -430,6 +669,7 @@
     <div class="player-expanded" id="playerExpanded">
       <div class="player-mini-header">
         <span class="player-header-title">音乐播放器</span>
+        <span class="player-source" id="playerSource"></span>
         <div class="player-header-controls">
           <button class="player-min-btn" id="playerMinBtn" title="最小化">
             <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
@@ -499,7 +739,6 @@
   </div>
 
   <footer class="footer">
-    <p>本页面由 <span class="footer-name">赵炳杰</span> 设计与构建</p>
     <p class="footer-credit">灵感来自现代极简主义</p>
   </footer>
 
