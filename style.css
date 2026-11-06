@@ -1910,6 +1910,29 @@ a.skill-tag {
     border-bottom: none;
   }
 
+  /* 手机上首屏 CTA 会溢出被裁（body 有 overflow-x:hidden）→ 允许换行并去掉装饰线 */
+  .hero-greeting,
+  .hero-subtitle {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-cta {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .hero-cta .cta-line {
+    display: none;
+  }
+
+  .hero-cta .btn {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
   .writing-grid {
     grid-template-columns: minmax(0, 1fr);
   }
